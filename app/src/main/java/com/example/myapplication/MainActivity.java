@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonChoice2; // jawaban 2
     private Button mButtonChoice3; //jawaban 3
     private Button mButtonChoice4; //jawaban 4
-
+    private Button mAbout;
+    private AlertDialog.Builder alertDialog;
     private String mAnswer;  // untuk cek jawaban benar atau tidaknya
     private int mScore = 0;  // current total score
     private int mQuestionNumber = 0; //
@@ -28,7 +31,28 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
         updateQuestion();
         updateScore(mScore);
+        clickAbout();
+
     }
+
+    private void clickAbout() {
+        alertDialog = new AlertDialog.Builder(this);
+        mAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.setMessage("Jamaluddin Siregar \n Universitas Negeri Yogyakarta \n 2020").setPositiveButton("Oke", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        alertDialog.setCancelable(true);
+                    }
+                });
+                AlertDialog alert = alertDialog.create();
+                alert.setTitle("About");
+                alert.show();
+            }
+        });
+    }
+
     public void onClick(View view) {
         Button answer =(Button) view;
         if (answer.getText() == mAnswer){
@@ -70,5 +94,6 @@ public class MainActivity extends AppCompatActivity {
         mButtonChoice2 = findViewById(R.id.btn_answer2);
         mButtonChoice3 = findViewById(R.id.btn_answer3);
         mButtonChoice4 = findViewById(R.id.btn_answer4);
+        mAbout = findViewById(R.id.btn_about);
     }
 }
