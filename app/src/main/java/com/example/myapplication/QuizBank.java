@@ -2,23 +2,23 @@ package com.example.myapplication;
 
 public class QuizBank {
     private String textQuestions [] = {
-            "1. Apa warna bendera indonesia?",
-            "2. siapa presiden pertama indonesia?",
-            "3. siapa prseiden indonesia sekarang?",
-            "4. tahun berapa indonesia merdeka",
-            "5. Tahun berapa sekarang ?"
+            "Medan Merupakan Ibukota dari Provinsi ?",
+            "Pulau paling luas di Indonesia adalah ",
+            "Suku paling banyak di Indonesia adalah ",
+            "Candi Borobudur terletak di Provinsi ?",
+            "Lagu Ampar Ampar Pisang berasal dari ?"
     };
 
     // array of multiple choices for each question
     private String multipleChoice [][] = {
-            {"Merah - Putih", "putih merah", "kuning", "hijau"},
-            {"Soeharto", "Jokowi", "SBY", "Ir Soekarno"},
-            {"Megawati", "Prabowo", "Bj Habibi", "Jokowi"},
-            {"1999", "2018", "1945", "2000"},
-            {"1999", "2000", "2010", "2018"}
+            {"Kalimantan Timur", "Sulawesi Selatan", "Sumatera Utara", "Sumatera Selatan"},
+            {"Pulau Papua", "Pulau Kalimantan", "Pulau Sumatera", "Pulai Sulawesi"},
+            {"Suku Batak", "Suku Jawa", "Suku Melayu", "Suku Bugis"},
+            {"DKI Jakarta", "DI Yogyakarta", "Jawa Barat", "Jawa Tengah"},
+            {"Kalimantan Selatan", "Sulawesi Selatan", "Sumatera Selatan", "Jawa Timur"}
     };
 
-    private String mCorrectAnswers[] = {"Merah - Putih", "Ir Soekarno", "Jokowi", "1945", "2018"};
+    private String mCorrectAnswers[] = {"Sumatera Utara", "Pulau Papua", "Suku Jawa", "Jawa Tengah", "Kalimantan Selatan"};
 
     public int getLength(){
         return textQuestions.length;

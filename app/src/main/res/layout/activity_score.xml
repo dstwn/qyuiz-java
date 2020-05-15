@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    tools:context=".ScoreActivity">
+    <ImageView
+        android:id="@+id/header"
+        android:src="@drawable/bg_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:textSize="24dp"
+        android:layout_marginTop="80dp"
+        android:id="@+id/tv_hg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is Question!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:textSize="19dp"
+        android:id="@+id/tv_ys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is Question!"
+        app:layout_constraintTop_toBottomOf="@id/tv_hg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <Button
+        android:id="@+id/btn_retry"
+        android:text="Coba lagi"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:background="@color/colorPrimary"
+        android:layout_margin="30dp"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

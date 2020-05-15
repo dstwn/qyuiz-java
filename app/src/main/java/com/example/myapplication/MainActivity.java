@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 mQuestionNumber++;
         }else {
                 Toast.makeText(MainActivity.this, "It was the last question!", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(QuizActivity.this, HighestScoreActivity.class);
-//                intent.putExtra("score", mScore); // pass the current score to the second screen
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+                intent.putExtra("score", mScore); // pass the current score to the second screen
+                startActivity(intent);
         }
     }
 
