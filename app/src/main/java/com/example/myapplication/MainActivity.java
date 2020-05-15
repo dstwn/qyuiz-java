@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         updateScore(mScore);
     }
     public void onClick(View view) {
-        Button answer = (Button) view;
+        Button answer =(Button) view;
         if (answer.getText() == mAnswer){
             mScore = mScore + 1;
             Toast.makeText(MainActivity.this, "Benar!", Toast.LENGTH_SHORT).show();

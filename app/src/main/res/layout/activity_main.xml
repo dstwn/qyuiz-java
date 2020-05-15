@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tv_question">
         <Button
+            android:onClick="onClick"
             android:id="@+id/btn_answer1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,6 +36,7 @@
             android:tooltipText="@string/app_name"
             tools:ignore="MissingConstraints" />
         <Button
+            android:onClick="onClick"
             android:layout_marginTop="10dp"
             android:id="@+id/btn_answer2"
             app:layout_constraintTop_toBottomOf="@id/btn_answer1"
@@ -44,6 +46,7 @@
             android:tooltipText="@string/app_name"
             tools:ignore="MissingConstraints" />
         <Button
+            android:onClick="onClick"
             app:layout_constraintTop_toBottomOf="@id/btn_answer2"
             android:layout_marginTop="10dp"
             android:id="@+id/btn_answer3"
@@ -53,6 +56,7 @@
             android:tooltipText="@string/app_name"
             tools:ignore="MissingConstraints" />
         <Button
+            android:onClick="onClick"
             app:layout_constraintTop_toBottomOf="@id/btn_answer3"
             android:layout_marginTop="10dp"
             android:id="@+id/btn_answer4"
