@@ -14,7 +14,9 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        Button btnQuiz = findViewById(R.id.btn_quiz);
+        Button btnQuiz = findViewById(R.id.btn_quiz); //INISIALISASI BUTTON MULAI
+
+        //HANLDE KLIK BUTTON QUIZ
         btnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,7 +24,8 @@ public class IntroActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        Button btnAbout = findViewById(R.id.btn_tentang);
+        Button btnAbout = findViewById(R.id.btn_tentang); //INISIALISASI BUTTON ABOUT
+        //HANDLE KLIK BUTTON ABOUT
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

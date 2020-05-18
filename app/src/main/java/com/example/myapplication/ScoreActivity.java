@@ -14,10 +14,11 @@ public class ScoreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
-
+        //INISIALISASI TEKS
         TextView txtScore = (TextView) findViewById(R.id.tv_ys);
         TextView txtHighScore = (TextView) findViewById(R.id.tv_hg);
 
+        //MENDAPATKAN DATA SKOR DAN SKOR TERTINGGI
         Intent intent = getIntent();
         int score = intent.getIntExtra("score", 0);
         txtScore.setText("Your score: " + score);
@@ -34,6 +35,8 @@ public class ScoreActivity extends AppCompatActivity {
             editor.commit();
         }
     }
+
+    //INISIALISASI BUTTON KEMBALI
     public void onClick(View view) {
         Intent intent = new Intent(ScoreActivity.this, MainActivity.class);
         startActivity(intent);

@@ -28,27 +28,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initComponents();
-        updateQuestion();
-        updateScore(mScore);
+        initComponents(); //untuk inisialisasi komponen
+        updateQuestion(); //untuk update pertanyaan
+        updateScore(mScore); //untuk update skor
 
     }
-
+    //UNTUK HANDLE KLIK JAWABAN
     public void onClick(View view) {
         Button answer =(Button) view;
+        //JIKA JAWABAN BENAR
         if (answer.getText() == mAnswer){
             mScore = mScore + 1;
             Toast.makeText(MainActivity.this, "Benar!", Toast.LENGTH_SHORT).show();
-        }else
+        }else //JIKA JAWABAN SALAH
             Toast.makeText(MainActivity.this, "Salah!", Toast.LENGTH_SHORT).show();
-
+        //PANGGIL
         updateScore(mScore);
         updateQuestion();
     }
+
+    //UNTUK UPDATE SKOR
     private void updateScore(int point) {
         mScoreView.setText("" + mScore+"/"+mQuestionLibrary.getLength());
     }
-
+    //METHOD UPDATE QUESTION
     private void updateQuestion() {
         if (mQuestionNumber<mQuestionLibrary.getLength()){
                 mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
