@@ -31,26 +31,7 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
         updateQuestion();
         updateScore(mScore);
-        clickAbout();
 
-    }
-
-    private void clickAbout() {
-        alertDialog = new AlertDialog.Builder(this);
-        mAbout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                alertDialog.setMessage("Jamaluddin Siregar \n Universitas Negeri Yogyakarta \n 2020").setPositiveButton("Oke", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        alertDialog.setCancelable(true);
-                    }
-                });
-                AlertDialog alert = alertDialog.create();
-                alert.setTitle("About");
-                alert.show();
-            }
-        });
     }
 
     public void onClick(View view) {
@@ -94,6 +75,5 @@ public class MainActivity extends AppCompatActivity {
         mButtonChoice2 = findViewById(R.id.btn_answer2);
         mButtonChoice3 = findViewById(R.id.btn_answer3);
         mButtonChoice4 = findViewById(R.id.btn_answer4);
-        mAbout = findViewById(R.id.btn_about);
     }
 }
